@@ -1,12 +1,9 @@
-using backendInventory.Domain.Enums;
-
 namespace backendInventory.Domain.Models;
 
 public class Building
 {
     public int Id { get; set; }
     public string? Name { get; set; }
-    public Floor Floor { get; set; }
 
     public int UnitId { get; set; }
     public Unit? Unit { get; set; }

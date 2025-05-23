@@ -61,7 +61,6 @@ public class BuildingService : IBuildingService
             throw new Exception("Unit not found.");
 
         building.Name = buildingDTO.Name;
-        building.Floor = buildingDTO.Floor;
         building.UnitId = buildingDTO.UnitId;
 
         _buildingRepository.Update(building);

@@ -11,7 +11,6 @@ public class BuildingMapping : MappingProfile
     {
         CreateMap<BuildingDTO, Building>();
         CreateMap<Building, BuildingViewModel>()
-            .ForMember(dest => dest.UnitName, opt => opt.MapFrom(src => src.Unit.Name))
-            .ForMember(dest => dest.FloorName, opt => opt.MapFrom(src => src.Floor.ToString()));
+            .ForMember(dest => dest.UnitName, opt => opt.MapFrom(src => src.Unit.Name));
     }
 }

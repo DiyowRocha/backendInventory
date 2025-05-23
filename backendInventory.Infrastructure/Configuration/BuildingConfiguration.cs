@@ -12,7 +12,6 @@ public class BuildingConfiguration : IEntityTypeConfiguration<Building>
 
         builder.HasKey(b => b.Id);
         builder.Property(b => b.Name).HasMaxLength(100);
-        builder.Property(b => b.Floor).HasConversion<int>();
 
         builder.HasOne(b => b.Unit)
             .WithMany(u => u.Buildings)

@@ -15,7 +15,7 @@ public class PrinterMapping : MappingProfile
             .ForMember(dest => dest.ModelName, opt => opt.MapFrom(src => src.Model.Name))
             .ForMember(dest => dest.UnitName, opt => opt.MapFrom(src => src.Unit.Name))
             .ForMember(dest => dest.BuildingName, opt => opt.MapFrom(src => src.Building.Name))
-            .ForMember(dest => dest.Floor, opt => opt.MapFrom(src => src.Building.Floor.ToString()))
-            .ForMember(dest => dest.DepartmentName, opt => opt.MapFrom(src => src.Department.Name));
+            .ForMember(dest => dest.DepartmentName, opt => opt.MapFrom(src => src.Department.Name))
+            .ForMember(dest => dest.DepartmentFloor, opt => opt.MapFrom(src => src.Department.Floor));
     }
 }
