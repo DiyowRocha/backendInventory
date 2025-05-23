@@ -21,7 +21,7 @@ public class ModelController : ControllerBase
         var model = await _modelService.CreateModelAsync(modelDTO);
 
         if (model is null)
-            return NotFound("Manufacturer not found.");
+            return NotFound("Manufacturer not found."); // a mensagem // nome da classe estão estranhos
 
         return Created("api/model/", model);
     }
@@ -32,7 +32,7 @@ public class ModelController : ControllerBase
         var models = await _modelService.GetAllModelsAsync();
 
         if (!models.Any())
-            return NotFound("Models not found.");
+            return NotFound("Models not found."); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(models);
     }

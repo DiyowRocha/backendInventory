@@ -29,7 +29,7 @@ public class DepartmentController : ControllerBase
         var departments = await _departmentService.GetAllDepartmentsAsync();
 
         if (!departments.Any())
-            return NotFound("Departments not found.");
+            return NotFound("Departments not found."); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(departments);
     }

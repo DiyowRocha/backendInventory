@@ -3,6 +3,7 @@ namespace backendInventory.Domain.Models;
 public class Unit
 {
     public int Id { get; set; }
+    //string é nullable por padrão, e nesse caso me parecem campos required
     public string? Name { get; set; }
     public string? Address { get; set; }
     public string? Number { get; set; }
