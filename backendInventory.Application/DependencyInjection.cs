@@ -19,7 +19,7 @@ public static class DependencyInjection
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddScoped<IManufacturerService, ManufacturerService>();
-        services.AddScoped<IModelService, ModelService>();
+        services.AddScoped<IModelService, ModelService>(); // o que seria modelservice (?)
         services.AddScoped<IUnitService, UnitService>();
         services.AddScoped<IBuildingService, BuildingService>();
         services.AddScoped<IDepartmentService, DepartmentService>();

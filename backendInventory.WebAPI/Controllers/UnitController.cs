@@ -29,7 +29,7 @@ public class UnitController : ControllerBase
         var units = await _unitService.GetAllUnitsAsync();
 
         if (!units.Any())
-            return NotFound("Units not found.");
+            return NotFound("Units not found."); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(units);
     }

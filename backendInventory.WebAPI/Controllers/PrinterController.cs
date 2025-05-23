@@ -29,7 +29,7 @@ public class PrinterController : ControllerBase
         var printers = await _printerService.GetAllPrintersAsync();
 
         if (!printers.Any())
-            return NotFound("Printers not found");
+            return NotFound("Printers not found"); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(printers);
     }

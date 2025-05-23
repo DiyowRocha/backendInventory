@@ -3,6 +3,7 @@ namespace backendInventory.Domain.Models;
 public class Printer
 {
     public int Id { get; set; }
+    // string é nullable por default
     public string? SerialNumber { get; set; }
     public string? IPAddress { get; set; }
     public string? PrintQueue { get; set; }

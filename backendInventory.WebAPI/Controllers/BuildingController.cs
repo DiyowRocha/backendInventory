@@ -30,7 +30,7 @@ public class BuildingController : ControllerBase
         var buildings = await _buildingService.GetAllBuildingAsync();
 
         if (!buildings.Any())
-            return NotFound("Buildings not found.");
+            return NotFound("Buildings not found."); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(buildings);
     }
@@ -41,7 +41,7 @@ public class BuildingController : ControllerBase
         var building = await _buildingService.GetBuildingById(id);
 
         if (building is null)
-            return NotFound("Building not found.");
+            return NotFound("Building not found."); 
 
         return Ok(building);
     }
@@ -63,7 +63,7 @@ public class BuildingController : ControllerBase
         var building = await _buildingService.DeleteBuildingAsync(id);
 
         if (!building)
-            return NotFound("Building not found.");
+            return NotFound("Building not found."); 
 
         return Ok("Building deleted.");
     }

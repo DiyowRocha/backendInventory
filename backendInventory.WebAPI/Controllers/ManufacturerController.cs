@@ -29,7 +29,7 @@ public class ManufacturerController : ControllerBase
         var manufacturers = await _manufacturerService.GetAllManufacturers();
 
         if (!manufacturers.Any())
-            return NotFound("Manufacturers not found.");
+            return NotFound("Manufacturers not found."); // --> Atenção no retorno, para esse caso existe um melhor https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404 
 
         return Ok(manufacturers);
     }
